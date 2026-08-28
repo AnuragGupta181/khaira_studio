@@ -1,7 +1,7 @@
 'use client';
 
 import React from "react";
-import { FaInstagram, FaYoutube, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { MapPin, Mail } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/magicui/grid-pattern";
@@ -9,8 +9,44 @@ import { GridPattern } from "@/components/magicui/grid-pattern";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const businessLinks = [
+    { label: "Advertise With Us", href: "/advertise" },
+    { label: "Business Plans", href: "/business/pricing" },
+    { label: "Marketing Solutions", href: "/marketing" },
+    { label: "Consultancy Plans", href: "/consultancy" },
+    { label: "Animation Ads", href: "/projects" },
+    { label: "Commercial Shoots", href: "/projects" },
+  ];
+
+  const legalLinks = [
+    { label: "Privacy Policy", href: "/legal/privacy-policy" },
+    { label: "Terms of Service", href: "/legal/terms-of-service" },
+    { label: "Data Sharing Policy", href: "/legal/data-sharing" },
+    { label: "PII / SPI Data Policy", href: "/legal/pii-spi-policy" },
+    { label: "Cookie Policy", href: "/legal/cookie-policy" },
+    { label: "Refund & Cancellation", href: "/legal/refund-policy" },
+    { label: "Grievance Redressal", href: "/legal/grievance" },
+  ];
+
+  const supportLinks = [
+    { label: "Contact Us", href: "/contact" },
+    { label: "Help Center", href: "/help" },
+    { label: "Report Abuse", href: "/report-abuse" },
+    { label: "Accessibility", href: "/accessibility" },
+    { label: "Sitemap", href: "/sitemap.xml" },
+  ];
+
   return (
-    <footer className="relative bg-gray-900 text-white py-10 px-6 overflow-hidden ">
+    <footer className="relative bg-gray-900 text-white py-12 px-6 overflow-hidden border-t border-gray-800">
+      {/* Background Globe Graphic Overlay */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center opacity-30 sm:opacity-40">
+        <img
+          src="/scheme-gloge.png"
+          alt=""
+          className="w-full max-w-6xl h-full object-cover sm:object-contain mix-blend-screen pointer-events-none object-bottom select-none filter saturate-[3.5] contrast-135 brightness-95"
+        />
+      </div>
+
       {/* Animated Grid Background */}
       <div
         className="absolute inset-0 z-0 animate-[slowPulse_20s_ease-in-out_infinite]"
@@ -29,69 +65,96 @@ const Footer = () => {
             [10, 15],
           ]}
           className={cn(
-            "[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]",
+            "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
             "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 opacity-10"
           )}
         />
       </div>
 
-      {/* ✅ Footer Content */}
-      <div className="relative z-10 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 ">
-        {/* Brand */}
-        <div>
-          <h1 className="text-2xl font-bold mb-4">
+      {/* Footer Content */}
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        {/* Brand & Address Column */}
+        <div className="space-y-4">
+          <h1 className="text-2xl font-bold">
             Khaira Digital Solutions <span className="text-red-500">Private Limited</span>
           </h1>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm leading-relaxed">
             Ad video production, voiceover, dubbing, animation, and digital branding — by RJ Mohit (Akashwani Radio).
           </p>
+          <address className="not-italic space-y-2.5 pt-2 text-xs text-gray-400">
+            <div className="flex gap-2">
+              <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+              <span>Prateek Laurel, Sector 120, Noida, Uttar Pradesh – 201301, India</span>
+            </div>
+            <div className="flex gap-2">
+              <Mail className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+              <a href="mailto:info@khairadigital.com" className="hover:text-white transition-colors">
+                info@khairadigital.com
+              </a>
+            </div>
+          </address>
         </div>
 
-        {/* Services */}
+        {/* Business & Growth */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Our Services</h2>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li><Link href="/#" className="hover:text-white">Animation Ads</Link></li>
-            <li><Link href="/#" className="hover:text-white">Commercial Shoots</Link></li>
-            <li><Link href="/#" className="hover:text-white">Dubbing & Voiceovers</Link></li>
-            <li><Link href="/#" className="hover:text-white">Social Media Marketing</Link></li>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200 mb-4">
+            Business & Growth
+          </h2>
+          <ul className="space-y-2.5 text-gray-400 text-sm">
+            {businessLinks.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="hover:text-white transition-colors">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Legal & Compliance */}
+        <div>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200 mb-4">
+            Legal & Compliance
+          </h2>
+          <ul className="space-y-2.5 text-gray-400 text-sm">
+            {legalLinks.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="hover:text-white transition-colors">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
         {/* Support */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Support</h2>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li><Link href="/#" className="hover:text-white">FAQ</Link></li>
-            <li><Link href="/#" className="hover:text-white">Pricing</Link></li>
-            <li><Link href="/#" className="hover:text-white">Contact Us</Link></li>
-            <li><Link href="/#" className="hover:text-white">Terms & Conditions</Link></li>
+          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200 mb-4">
+            Support
+          </h2>
+          <ul className="space-y-2.5 text-gray-400 text-sm">
+            {supportLinks.map((item) => (
+              <li key={item.label}>
+                <Link href={item.href} className="hover:text-white transition-colors">
+                  {item.label}
+                </Link>
+              </li>
+            ))}
           </ul>
-        </div>
-
-        {/* Social Links */}
-        <div>
-          <h2 className="text-lg font-semibold mb-4">Connect With Us</h2>
-          <div className="flex space-x-4 text-gray-400 text-xl">
-            <Link href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-              <FaInstagram />
-            </Link>
-            <Link href="https://www.youtube.com/@rsstoryanalysis9547" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-              <FaYoutube />
-            </Link>
-            <Link href="https://wa.me/917827574020" target="_blank" rel="noopener noreferrer" className="hover:text-white">
-              <FaWhatsapp />
-            </Link>
-            <Link href="mailto:khairadigitalsolutions@gmail.com" className="hover:text-white">
-              <FaEnvelope />
-            </Link>
-          </div>
         </div>
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative z-10 mt-10 text-center text-gray-500 text-sm">
-        © {currentYear} Khaira Digital Solutions Private Limited. All rights reserved.
+      <div className="relative z-10 mt-12 pt-6 border-t border-gray-800 text-center md:flex md:justify-between md:items-center max-w-7xl mx-auto text-gray-500 text-xs space-y-3 md:space-y-0">
+        <div>
+          © {currentYear} <span className="text-gray-300 font-medium">Khaira Digital Solutions Private Limited</span>. All rights reserved.
+        </div>
+        <div className="flex flex-wrap justify-center space-x-4">
+          <Link href="/legal/privacy-policy" className="hover:text-gray-400 transition-colors">Privacy</Link>
+          <Link href="/legal/terms-of-service" className="hover:text-gray-400 transition-colors">Terms</Link>
+          <Link href="/legal/cookie-policy" className="hover:text-gray-400 transition-colors">Cookies</Link>
+          <Link href="/legal/grievance" className="hover:text-gray-400 transition-colors">Grievance</Link>
+        </div>
       </div>
     </footer>
   );

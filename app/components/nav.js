@@ -29,9 +29,12 @@ const Navbar2 = () => {
         <div className="relative flex justify-between items-center h-16">
           {/* Logo (Extreme Left) */}
           <div className="flex items-center shrink-0">
-            <Link href="/">
-              <span className="text-base sm:text-lg lg:text-xl font-bold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent">
-                Khaira Digital Solutions Private Limited
+            <Link href="/" className="flex flex-col sm:flex-row sm:items-baseline sm:gap-2">
+              <span className="text-lg sm:text-xl font-black bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent tracking-tight">
+                Khaira Studio
+              </span>
+              <span className="text-xs font-semibold text-gray-500 hidden xl:inline">
+                | Khaira Digital Solutions Private Limited
               </span>
             </Link>
           </div>

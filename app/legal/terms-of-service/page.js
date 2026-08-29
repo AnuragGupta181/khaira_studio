@@ -6,7 +6,7 @@ const sections = [
     heading: '1. Acceptance of Terms',
     content: (
       <p>
-        By accessing or using the services provided by Khaira Digital Solutions Private Limited ("Company", "We", "Us"), including video editing, voiceover production, animation, graphic design, and digital marketing, you agree to be bound by these Terms of Service. If you disagree with any portion of these terms, you must not use our website or commission services.
+        By accessing or using the services provided by Khaira Digital Solutions Private Limited (&quot;Company&quot;, &quot;We&quot;, &quot;Us&quot;), including video editing, voiceover production, animation, graphic design, and digital marketing, you agree to be bound by these Terms of Service. If you disagree with any portion of these terms, you must not use our website or commission services.
       </p>
     ),
   },

@@ -37,7 +37,7 @@ const ContactPage = () => {
           Contact Us
         </h1>
         <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-          Have a media production project or business inquiry? Let's collaborate! Reach out to us directly or send a message below.
+          Have a media production project or business inquiry? Let&apos;s collaborate! Reach out to us directly or send a message below.
         </p>
       </section>
 

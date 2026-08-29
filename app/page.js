@@ -10,6 +10,7 @@ import { NumberTicker } from '@/components/magicui/number-ticker';
 import { BoxReveal } from '@/components/magicui/box-reveal';
 import { cn } from '@/lib/utils';
 import { SparklesText } from '@/components/magicui/sparkles-text';
+import CrowdCanvas from '@/app/components/CrowdCanvas';
 import {
   DraggableCardBody,
   DraggableCardContainer,
@@ -240,14 +241,11 @@ const ourServices = [
     }`;
 
 
-
-    useEffect(() => {
-  if (testimonials.length > 0) {
-    // kuch kaam
-  }
-}, [testimonials.length]); // ✅ Ab warning nahi aayegi
-
-
+  useEffect(() => {
+    if (testimonials.length > 0) {
+      // kuch kaam
+    }
+  }, [testimonials.length]); // ✅ Ab warning nahi aayegi
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 text-gray-900 font-sans overflow-hidden">
@@ -267,7 +265,13 @@ const ourServices = [
         />
       ))}
     </div>
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+        {/* CrowdCanvas walking figures */}
+        <div className="absolute inset-0 z-10 pointer-events-none">
+          <CrowdCanvas />
+        </div>
+
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -translate-y-12 sm:-translate-y-16 md:-translate-y-24">
           <div className={fadeInUp('hero')}>
             <BoxReveal boxColor={"#db2777"} duration={0.5}>
             <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
@@ -305,7 +309,7 @@ const ourServices = [
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section (Temporarily commented out)
       <section id="stats" className="py-20 bg-white/50 backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -327,6 +331,7 @@ const ourServices = [
           </div>
         </div>
       </section>
+      */}
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
@@ -456,151 +461,9 @@ const ourServices = [
 
 
 
-      {/* Head Rj Mohit Mathuriya */}
-       <section id="team" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 ${fadeInUp('team')}`}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Meet Our <span className="text-red-600">Organizer Head</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className={`${fadeInUp('team')}`}>
-              <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl blur opacity-20"></div>
-              {/* <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"> */}
-                <Image
-                  src="/rjmohitmathuriya.jpg"
-                  alt="RJ Mohit Mathuriya"
-                  width={1280}
-                  height={384} // approximate 16:9 for h-96
-                  className="relative object-cover rounded-2xl shadow-2xl"
-                />
-              {/* </BackgroundGradient> */}
-              </div>
-            </div>
 
 
 
-            
-
-            <div className={`${fadeInUp('team')}`}>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Rj Mohit Mathuriya</h3>
-                  <p className="text-lg text-red-600 font-semibold mb-4">Radio Jockey & Voice Artist</p>
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-gray-600">8+ Years Experience</span>
-                  </div>
-                </div>
-
-                <div className="prose prose-lg text-gray-600">
-                  <p className="mb-4">
-                    RJ Mohit Mathuriya, a talented voice artist from Akashvani Radio, has worked across radio, television, YouTube, and various brand ads. He has lent his voice and creativity to major brands like PhonePe, NoBroker.com, Jooyo Hotel, and Fastrack, as well as important government ads and documentaries including campaigns for PNB Bank, Corona awareness, and the Balika Kaushalya Yojana with Prime Minister Narendra Modi. His voice connects with people and brings stories to life across every platform.
-                  </p>
-                  <p>
-                 With years of experience in the media industry, Mohit has made his mark across radio, television, YouTube, and digital platforms. He has lent his voice to popular brand ads for PhonePe, NoBroker.com, Jooyo Hotel, and Fastrack, delivering performances that connect with audiences. Mohit has also contributed to major government campaigns and documentaries, including those for PNB Bank, COVID-19 awareness, and the Balika Kaushalya Yojana featuring Prime Minister Narendra Modi. Known for his clear voice and engaging delivery, he remains a trusted name in Indian media.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  {['Working for Radio', ' Television', 'Youtube','Radio Jockey','Voice Artist' ].map((skill) => (
-                    <span key={skill} className="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <Link href={'/contact'}>
-                <button className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                  Contact US
-                </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section id="team" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 ${fadeInUp('team')}`}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Meet Our <span className="text-red-600">Expert Team</span>
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className={`${fadeInUp('team')}`}>
-              <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-red-500 to-pink-600 rounded-2xl blur opacity-20"></div>
-              {/* <BackgroundGradient className="rounded-[22px] max-w-sm p-4 sm:p-10 bg-white dark:bg-zinc-900"> */}
-                <Image
-                  src="/Editor.jpg"
-                  alt="Dheeraj prajapati"
-                  width={1280}
-                  height={384} // approximate 16:9 for h-96
-                  className="relative object-cover rounded-2xl shadow-2xl"
-                />
-              {/* </BackgroundGradient> */}
-              </div>
-            </div>
-
-
-
-            
-
-            <div className={`${fadeInUp('team')}`}>
-              <div className="space-y-6">
-                <div>
-                  <h3 className="text-3xl font-bold text-gray-900 mb-2">Dheeraj prajapati</h3>
-                  <p className="text-lg text-red-600 font-semibold mb-4">Video Editor & Creative Writer</p>
-                  <div className="flex items-center space-x-4 mb-6">
-                    <div className="flex items-center space-x-1">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <span className="text-gray-600">8+ Years Experience</span>
-                  </div>
-                </div>
-
-                <div className="prose prose-lg text-gray-600">
-                  <p className="mb-4">
-                    Professional video editor and creative writer with over 8 years of industry experience. 
-                    Specializes in crafting compelling narratives and producing high-quality video content 
-                    that engages audiences and drives results.
-                  </p>
-                  <p>
-                    From advertisement scripts to storytelling, Dheeraj brings creativity and technical 
-                    expertise to every project, ensuring your message resonates with your target audience.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap gap-3">
-                  {['Video Editing', 'Script Writing', 'Creative Direction', 'Post Production'].map((skill) => (
-                    <span key={skill} className="px-4 py-2 bg-red-100 text-red-700 rounded-full text-sm font-medium">
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-                <Link href={'/contact'}>
-                <button className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
-                  Contact Dheeraj
-                </button>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">

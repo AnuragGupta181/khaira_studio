@@ -1,10 +1,49 @@
 'use client';
 
-import React from "react";
-import { MapPin, Mail } from "lucide-react";
+import React, { useState } from "react";
+import { MapPin, Mail, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { GridPattern } from "@/components/magicui/grid-pattern";
+
+const AccordionSection = ({ title, links }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-gray-800/80 py-3.5 md:border-b-0 md:py-0">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full flex items-center justify-between text-left focus:outline-none md:pointer-events-none"
+        aria-expanded={isOpen}
+      >
+        <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200">
+          {title}
+        </h2>
+        <ChevronDown
+          className={cn(
+            "w-4 h-4 text-gray-400 transition-transform duration-300 md:hidden",
+            isOpen && "rotate-180 text-white"
+          )}
+        />
+      </button>
+
+      <ul
+        className={cn(
+          "space-y-2.5 text-gray-400 text-sm mt-3 md:mt-4 transition-all duration-300",
+          isOpen ? "block" : "hidden md:block"
+        )}
+      >
+        {links.map((item) => (
+          <li key={item.label}>
+            <Link href={item.href} className="hover:text-white transition-colors block py-0.5">
+              {item.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+};
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -72,9 +111,9 @@ const Footer = () => {
       </div>
 
       {/* Footer Content */}
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
         {/* Brand & Address Column */}
-        <div className="space-y-4">
+        <div className="space-y-4 pb-4 md:pb-0 border-b border-gray-800/80 md:border-b-0">
           <h1 className="text-2xl font-bold">
             Khaira Digital Solutions <span className="text-red-500">Private Limited</span>
           </h1>
@@ -95,57 +134,18 @@ const Footer = () => {
           </address>
         </div>
 
-        {/* Business & Growth */}
-        <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200 mb-4">
-            Business & Growth
-          </h2>
-          <ul className="space-y-2.5 text-gray-400 text-sm">
-            {businessLinks.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href} className="hover:text-white transition-colors">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Business & Growth Accordion */}
+        <AccordionSection title="Business & Growth" links={businessLinks} />
 
-        {/* Legal & Compliance */}
-        <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200 mb-4">
-            Legal & Compliance
-          </h2>
-          <ul className="space-y-2.5 text-gray-400 text-sm">
-            {legalLinks.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href} className="hover:text-white transition-colors">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Legal & Compliance Accordion */}
+        <AccordionSection title="Legal & Compliance" links={legalLinks} />
 
-        {/* Support */}
-        <div>
-          <h2 className="text-sm font-bold uppercase tracking-wider text-gray-200 mb-4">
-            Support
-          </h2>
-          <ul className="space-y-2.5 text-gray-400 text-sm">
-            {supportLinks.map((item) => (
-              <li key={item.label}>
-                <Link href={item.href} className="hover:text-white transition-colors">
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* Support Accordion */}
+        <AccordionSection title="Support" links={supportLinks} />
       </div>
 
       {/* Footer Bottom */}
-      <div className="relative z-10 mt-12 pt-6 border-t border-gray-800 text-center md:flex md:justify-between md:items-center max-w-7xl mx-auto text-gray-500 text-xs space-y-3 md:space-y-0">
+      <div className="relative z-10 mt-10 pt-6 border-t border-gray-800 text-center md:flex md:justify-between md:items-center max-w-7xl mx-auto text-gray-500 text-xs space-y-3 md:space-y-0">
         <div>
           © {currentYear} <span className="text-gray-300 font-medium">Khaira Digital Solutions Private Limited</span>. All rights reserved.
         </div>

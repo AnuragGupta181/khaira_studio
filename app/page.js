@@ -412,15 +412,11 @@ const ourServices = [
               speed="normal"
             />
           </div>
-
-    
-
         </div>
       </section>
 
+    </div>
+  );
+};
 
-                  </div>
-                );
-          };
-          
-          export default ProfessionalWebsite;
+export default ProfessionalWebsite;

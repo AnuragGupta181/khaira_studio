@@ -28,7 +28,7 @@ export default function ProjectCarouselCard({ project }) {
   };
 
   return (
-    <div className="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden flex flex-col group hover:shadow-2xl transition-all duration-300">
+    <div className="bg-white rounded-3xl border border-gray-200 shadow-xl overflow-hidden flex flex-col group hover:shadow-2xl hover:border-blue-200 transition-all duration-300">
       {/* Image Carousel Container */}
       <div className="relative h-72 sm:h-80 w-full overflow-hidden bg-slate-900">
         <img
@@ -41,7 +41,7 @@ export default function ProjectCarouselCard({ project }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 pointer-events-none" />
 
         {/* Category Badge */}
-        <div className="absolute top-4 left-4 bg-red-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
+        <div className="absolute top-4 left-4 bg-blue-600/90 backdrop-blur-md text-white text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wider shadow">
           {project.category}
         </div>
 
@@ -88,7 +88,7 @@ export default function ProjectCarouselCard({ project }) {
       <div className="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-4 bg-white">
         <div>
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-2xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+            <h3 className="text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
               {project.title}
             </h3>
             {project.link && (
@@ -96,7 +96,7 @@ export default function ProjectCarouselCard({ project }) {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center space-x-1 text-sm font-semibold text-red-600 hover:text-red-700 bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-full transition-colors"
+                className="inline-flex items-center space-x-1 text-sm font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 hover:bg-blue-100 px-3.5 py-1.5 rounded-full transition-colors"
               >
                 <span>Visit</span>
                 <ExternalLink className="w-4 h-4" />
@@ -112,11 +112,11 @@ export default function ProjectCarouselCard({ project }) {
         {/* Tech Stack Pills */}
         <div className="pt-4 border-t border-gray-100">
           <div className="flex flex-wrap gap-2 items-center">
-            <Code className="w-4 h-4 text-gray-400" />
+            <Code className="w-4 h-4 text-blue-500" />
             {project.techStack.map((tech, idx) => (
               <span
                 key={idx}
-                className="bg-slate-100 text-slate-700 text-xs px-3 py-1 rounded-md font-mono font-medium border border-gray-200/50"
+                className="bg-blue-50/70 text-blue-700 text-xs px-3 py-1 rounded-md font-mono font-medium border border-blue-100"
               >
                 {tech}
               </span>

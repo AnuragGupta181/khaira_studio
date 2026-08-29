@@ -30,7 +30,7 @@ const sections = [
     heading: '3. Schedule an Engineering Consultation',
     content: (
       <p>
-        Schedule a 1-on-1 architecture review session with our engineering leads by emailing <a href="mailto:info@khairadigital.com" className="text-red-600 hover:underline font-medium">info@khairadigital.com</a>.
+        Schedule a 1-on-1 architecture review session with our engineering leads by emailing <a href="mailto:info@khairadigital.com" className="text-blue-600 hover:underline font-medium">info@khairadigital.com</a>.
       </p>
     ),
   },

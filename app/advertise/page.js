@@ -29,7 +29,7 @@ const sections = [
     heading: '3. Partner With Our Engineering Team',
     content: (
       <p>
-        Ready to scale your software product? Contact our technical growth strategists today at <a href="mailto:info@khairadigital.com" className="text-red-600 hover:underline font-medium">info@khairadigital.com</a>.
+        Ready to scale your software product? Contact our technical growth strategists today at <a href="mailto:info@khairadigital.com" className="text-blue-600 hover:underline font-medium">info@khairadigital.com</a>.
       </p>
     ),
   },

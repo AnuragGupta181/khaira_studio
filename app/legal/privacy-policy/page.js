@@ -57,7 +57,7 @@ const sections = [
           <li>Request erasure of your personal data (subject to legal retention requirements)</li>
           <li>Withdraw previously granted consent for processing</li>
         </ul>
-        <p>To exercise any of these rights, contact us at <a href="mailto:admin@khairadigital.com" className="text-red-400 hover:underline">admin@khairadigital.com</a>.</p>
+        <p>To exercise any of these rights, contact us at <a href="mailto:admin@khairadigital.com" className="text-blue-600 hover:underline">admin@khairadigital.com</a>.</p>
       </div>
     ),
   },
@@ -71,7 +71,7 @@ const sections = [
           <p className="font-semibold text-gray-900">Data Protection Officer</p>
           <p className="text-gray-700">Khaira Digital Solutions Private Limited</p>
           <p className="text-gray-600">Prateek Laurel, Sector 120, Noida, Uttar Pradesh – 201301, India</p>
-          <p className="text-gray-600">Email: <a href="mailto:admin@khairadigital.com" className="text-red-600 hover:underline font-medium">admin@khairadigital.com</a></p>
+          <p className="text-gray-600">Email: <a href="mailto:admin@khairadigital.com" className="text-blue-600 hover:underline font-medium">admin@khairadigital.com</a></p>
         </div>
       </div>
     ),

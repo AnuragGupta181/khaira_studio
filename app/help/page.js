@@ -38,7 +38,7 @@ const sections = [
     heading: '4. Billing & Invoicing FAQs',
     content: (
       <p>
-        Invoices are generated upon milestone confirmation with full GST tax details. Corporate payment modes include bank wire transfer, UPI, or corporate card. For billing support, email <a href="mailto:info@khairadigital.com" className="text-red-600 hover:underline font-medium">info@khairadigital.com</a>.
+        Invoices are generated upon milestone confirmation with full GST tax details. Corporate payment modes include bank wire transfer, UPI, or corporate card. For billing support, email <a href="mailto:info@khairadigital.com" className="text-blue-600 hover:underline font-medium">info@khairadigital.com</a>.
       </p>
     ),
   },

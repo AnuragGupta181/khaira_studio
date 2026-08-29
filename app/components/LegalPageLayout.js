@@ -33,19 +33,19 @@ export default function LegalPageLayout({ title, subtitle, lastUpdated, sections
   const safeSections = Array.isArray(sections) ? sections : [];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-pink-50 text-gray-900 font-sans pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50 text-gray-900 font-sans pt-24 pb-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         {/* Back Link */}
-        <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-red-600 mb-6 transition-colors">
+        <Link href="/" className="inline-flex items-center text-sm font-medium text-gray-600 hover:text-blue-600 mb-6 transition-colors">
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
         </Link>
 
         {/* Hero Banner */}
         <div className="bg-white border border-gray-200/80 rounded-3xl p-8 lg:p-12 mb-8 shadow-xl relative overflow-hidden">
-          <div className="inline-flex items-center gap-2 bg-red-50 border border-red-200 text-red-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-600 text-xs font-semibold px-3 py-1.5 rounded-full mb-4">
             <BookOpen size={13} /> Official Document
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent mb-3">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent mb-3">
             {title}
           </h1>
           {subtitle && <p className="text-gray-600 text-sm sm:text-base max-w-3xl mb-4 leading-relaxed">{subtitle}</p>}
@@ -60,11 +60,11 @@ export default function LegalPageLayout({ title, subtitle, lastUpdated, sections
             onClick={() => setMobileTocOpen(!mobileTocOpen)}
             className="w-full flex items-center justify-between text-sm font-bold text-gray-800"
           >
-            <div className="flex items-center gap-2 text-red-600">
+            <div className="flex items-center gap-2 text-blue-600">
               <BookOpen size={16} />
               <span>ON THIS PAGE</span>
             </div>
-            {mobileTocOpen ? <X size={18} className="text-red-600" /> : <ChevronRight size={18} className="text-gray-600" />}
+            {mobileTocOpen ? <X size={18} className="text-blue-600" /> : <ChevronRight size={18} className="text-gray-600" />}
           </button>
           {mobileTocOpen && (
             <nav className="mt-3 pt-3 border-t border-gray-100 space-y-1">
@@ -79,7 +79,7 @@ export default function LegalPageLayout({ title, subtitle, lastUpdated, sections
                   }}
                   className={`block px-3 py-2 rounded-xl text-xs transition-colors ${
                     activeId === s.id
-                      ? 'bg-red-50 text-red-600 font-semibold border border-red-200'
+                      ? 'bg-blue-50 text-blue-600 font-semibold border border-blue-200'
                       : 'text-gray-700 hover:bg-gray-50'
                   }`}
                 >
@@ -95,7 +95,7 @@ export default function LegalPageLayout({ title, subtitle, lastUpdated, sections
           {/* Desktop Sticky TOC Sidebar */}
           <aside className="hidden lg:block w-64 shrink-0 sticky top-24 self-start z-30">
             <div className="bg-white/90 border border-gray-200/90 backdrop-blur-md rounded-2xl p-4 shadow-lg">
-              <p className="text-xs font-bold uppercase tracking-wider text-red-600 mb-3 px-2">
+              <p className="text-xs font-bold uppercase tracking-wider text-blue-600 mb-3 px-2">
                 On this page
               </p>
               <nav className="space-y-1">
@@ -109,8 +109,8 @@ export default function LegalPageLayout({ title, subtitle, lastUpdated, sections
                     }}
                     className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs transition-all ${
                       activeId === s.id
-                        ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold shadow-sm'
-                        : 'text-gray-700 hover:text-red-600 hover:bg-red-50/50'
+                        ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold shadow-sm'
+                        : 'text-gray-700 hover:text-blue-600 hover:bg-blue-50/50'
                     }`}
                   >
                     <ChevronRight

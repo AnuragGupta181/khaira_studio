@@ -115,18 +115,18 @@ const Footer = () => {
         {/* Brand & Address Column */}
         <div className="space-y-4 pb-4 md:pb-0 border-b border-gray-800/80 md:border-b-0">
           <h1 className="text-2xl font-bold">
-            Khaira Digital Solutions <span className="text-red-500">Private Limited</span>
+            Khaira Digital Solutions <span className="text-blue-500">Private Limited</span>
           </h1>
           <p className="text-gray-400 text-sm leading-relaxed">
             Fullstack product development, AI model fine-tuning, web scraping, cloud deployment, and embedded hardware integration.
           </p>
           <address className="not-italic space-y-2.5 pt-2 text-xs text-gray-400">
             <div className="flex gap-2">
-              <MapPin className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+              <MapPin className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
               <span>Prateek Laurel, Sector 120, Noida, Uttar Pradesh – 201301, India</span>
             </div>
             <div className="flex gap-2">
-              <Mail className="w-4 h-4 text-red-500 shrink-0 mt-0.5" />
+              <Mail className="w-4 h-4 text-blue-500 shrink-0 mt-0.5" />
               <a href="mailto:info@khairadigital.com" className="hover:text-white transition-colors">
                 info@khairadigital.com
               </a>

@@ -30,7 +30,7 @@ const sections = [
     heading: '3. Accessibility Feedback & Assistance',
     content: (
       <p>
-        We welcome your feedback on website accessibility. If you experience barriers while accessing any part of our website or services, please contact our team at <a href="mailto:info@khairadigital.com" className="text-red-400 hover:underline">info@khairadigital.com</a>.
+        We welcome your feedback on website accessibility. If you experience barriers while accessing any part of our website or services, please contact our team at <a href="mailto:info@khairadigital.com" className="text-blue-600 hover:underline">info@khairadigital.com</a>.
       </p>
     ),
   },

@@ -30,7 +30,7 @@ const sections = [
     heading: '3. Request a Custom Strategy',
     content: (
       <p>
-        Get a tailored digital marketing roadmap for your business. Connect with our team at <a href="mailto:info@khairadigital.com" className="text-red-400 hover:underline">info@khairadigital.com</a>.
+        Get a tailored digital marketing roadmap for your business. Connect with our team at <a href="mailto:info@khairadigital.com" className="text-blue-600 hover:underline">info@khairadigital.com</a>.
       </p>
     ),
   },

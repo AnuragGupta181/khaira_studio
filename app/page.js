@@ -251,14 +251,14 @@ const ProfessionalWebsite = () => {
 
       {/* Hero Section */}
       <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-pink-500/10 to-purple-500/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-cyan-500/10"></div>
 
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {dots.map((style, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-gradient-to-r from-red-400 to-pink-400 rounded-full animate-pulse"
+              className="absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full animate-pulse"
               style={style}
             />
           ))}
@@ -271,21 +271,21 @@ const ProfessionalWebsite = () => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center translate-y-0 sm:-translate-y-16 md:-translate-y-24 pt-8 sm:pt-0">
           <div className="flex flex-col items-center justify-center text-center">
-            <BoxReveal boxColor={"#db2777"} duration={0.5} width="100%">
-              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-pulse text-center">
+            <BoxReveal boxColor={"#2563eb"} duration={0.5} width="100%">
+              <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent animate-pulse text-center">
                 Fullstack Software & AI Engineering
               </h1>
             </BoxReveal>
-            <BoxReveal boxColor={"#db2777"} duration={0.5} width="100%">
+            <BoxReveal boxColor={"#2563eb"} duration={0.5} width="100%">
               <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto text-center leading-relaxed">
                 From concept to code — fullstack web & mobile apps, LLM fine-tuning, web scraping, cloud deployment, and embedded hardware integration.
-                <span className="text-red-600 font-semibold"> Scalable software built for production.</span>
+                <span className="text-blue-600 font-semibold"> Scalable software built for production.</span>
               </p>
             </BoxReveal>
-            <BoxReveal boxColor={"#db2777"} duration={0.5} width="100%">
+            <BoxReveal boxColor={"#2563eb"} duration={0.5} width="100%">
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link href={'/contact'}>
-                  <button className="group bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
+                  <button className="group bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/25 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
                     <span>Start Your Project</span>
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </button>
@@ -297,7 +297,7 @@ const ProfessionalWebsite = () => {
 
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <ChevronDown className="w-8 h-8 text-red-500" />
+          <ChevronDown className="w-8 h-8 text-blue-600" />
         </div>
       </section>
 
@@ -305,7 +305,7 @@ const ProfessionalWebsite = () => {
       <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white w-full overflow-hidden">
         <div className="w-full px-0 sm:px-0 lg:px-0">
           <div className={`text-center mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${fadeInUp('services')}`}>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text ">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent">
               <SparklesText>Our Developer & AI Services</SparklesText>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -329,7 +329,7 @@ const ProfessionalWebsite = () => {
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <div className="inline-flex items-center space-x-2 text-red-600 mb-2">
+                  <div className="inline-flex items-center space-x-2 text-blue-600 mb-2">
                     {item.icon}
                     <h3 className="text-xl font-bold text-gray-900">{item.name}</h3>
                   </div>
@@ -341,7 +341,7 @@ const ProfessionalWebsite = () => {
             </div>
             <div className="flex items-center justify-center space-x-2 text-xs font-semibold text-gray-500 mt-2">
               <span>Swipe left or right to explore all services</span>
-              <ArrowRight className="w-4 h-4 text-red-500 animate-pulse" />
+              <ArrowRight className="w-4 h-4 text-blue-600 animate-pulse" />
             </div>
           </div>
 
@@ -375,11 +375,11 @@ const ProfessionalWebsite = () => {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-gradient-to-br from-red-50 to-pink-50">
+      <section id="portfolio" className="py-20 bg-gradient-to-br from-blue-50/60 via-slate-50 to-indigo-50/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 ${fadeInUp('portfolio')}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Featured <span className="text-red-600">Engineering</span> Case Studies
+              Featured <span className="text-blue-600">Engineering</span> Case Studies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Showcasing production software systems, fine-tuned AI models, and scalable cloud architectures
@@ -433,7 +433,7 @@ const ProfessionalWebsite = () => {
         <div className="max-w-7xl mx-auto  sm:px-6 lg:px-8">
           <div className={`text-center mb-6 ${fadeInUp('testimonials')}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              What Our <span className="text-red-600">Clients Say</span>
+              What Our <span className="text-blue-600">Clients Say</span>
             </h2>
           </div>
 

@@ -27,17 +27,17 @@ const ContactPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-pink-50 text-gray-900 font-sans pt-24 pb-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gradient-to-br from-white via-slate-50 to-blue-50 text-gray-900 font-sans pt-24 pb-20 px-4 sm:px-6 lg:px-8">
       {/* Hero Section */}
       <section className="text-center max-w-3xl mx-auto mb-16">
-        <span className="inline-block px-4 py-1.5 bg-red-50 border border-red-200 text-red-600 font-semibold text-xs rounded-full mb-4 uppercase tracking-wider">
+        <span className="inline-block px-4 py-1.5 bg-blue-50 border border-blue-200 text-blue-600 font-semibold text-xs rounded-full mb-4 uppercase tracking-wider">
           Get In Touch
         </span>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text text-transparent mb-4">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 bg-clip-text text-transparent mb-4">
           Contact Us
         </h1>
         <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
-          Have a media production project or business inquiry? Let&apos;s collaborate! Reach out to us directly or send a message below.
+          Have a software engineering, AI model fine-tuning, or cloud architecture inquiry? Let&apos;s collaborate! Reach out to us directly or send a message below.
         </p>
       </section>
 
@@ -46,7 +46,7 @@ const ContactPage = () => {
         {/* Contact Form Card */}
         <div className="lg:col-span-7 bg-white rounded-3xl p-8 sm:p-10 shadow-xl border border-gray-100 relative overflow-hidden">
           <h2 className="text-2xl font-bold text-gray-900 mb-2">Send Us a Message</h2>
-          <p className="text-gray-500 text-sm mb-8">Fill out the form below and our media team will get back to you within 24 hours.</p>
+          <p className="text-gray-500 text-sm mb-8">Fill out the form below and our technical engineering leads will get back to you within 24 hours.</p>
 
           {submitted ? (
             <div className="bg-emerald-50 border border-emerald-200 text-emerald-700 p-6 rounded-2xl text-center space-y-2">
@@ -63,7 +63,7 @@ const ContactPage = () => {
                     name="name"
                     required
                     placeholder="John Doe"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100 transition-all text-sm"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-sm"
                   />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ const ContactPage = () => {
                     name="email"
                     required
                     placeholder="john@example.com"
-                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100 transition-all text-sm"
+                    className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-sm"
                   />
                 </div>
               </div>
@@ -84,8 +84,8 @@ const ContactPage = () => {
                   type="text"
                   name="subject"
                   required
-                  placeholder="Video Editing / Voiceover / Marketing Campaign"
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100 transition-all text-sm"
+                  placeholder="Fullstack Web App / LLM Fine-Tuning / Cloud DevOps"
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-sm"
                 />
               </div>
 
@@ -95,21 +95,21 @@ const ContactPage = () => {
                   name="message"
                   rows={4}
                   required
-                  placeholder="Tell us about your project requirements..."
-                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-red-500 focus:ring-2 focus:ring-red-100 transition-all text-sm resize-none"
+                  placeholder="Tell us about your technical project requirements..."
+                  className="w-full px-4 py-3.5 rounded-xl border border-gray-200 bg-slate-50/50 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100 transition-all text-sm resize-none"
                 ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-red-500 to-pink-600 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-red-500/25 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 text-sm"
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold py-4 rounded-xl shadow-lg hover:shadow-blue-500/25 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2 text-sm"
               >
                 <Send className="w-4 h-4" /> Send Message
               </button>
             </form>
           )}
 
-          <BorderBeam duration={8} size={150} borderWidth={2} colorFrom="#ef4444" colorTo="#ec4899" />
+          <BorderBeam duration={8} size={150} borderWidth={2} colorFrom="#2563eb" colorTo="#06b6d4" />
         </div>
 
         {/* Direct Contact Cards Column */}
@@ -119,14 +119,14 @@ const ContactPage = () => {
           {/* Email Card */}
           <a
             href="mailto:info@khairadigital.com"
-            className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl hover:border-red-200 transition-all group"
+            className="flex items-center gap-4 bg-white p-5 rounded-2xl border border-gray-100 shadow-md hover:shadow-xl hover:border-blue-200 transition-all group"
           >
-            <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 group-hover:bg-gradient-to-br group-hover:from-red-500 group-hover:to-pink-600 group-hover:text-white transition-all shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 group-hover:bg-gradient-to-br group-hover:from-blue-600 group-hover:to-indigo-600 group-hover:text-white transition-all shrink-0">
               <Mail className="w-6 h-6" />
             </div>
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">Official Email</p>
-              <p className="text-base font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+              <p className="text-base font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
                 info@khairadigital.com
               </p>
             </div>
@@ -134,7 +134,7 @@ const ContactPage = () => {
 
           {/* Office Address Card */}
           <div className="flex items-start gap-4 bg-white p-5 rounded-2xl border border-gray-100 shadow-md">
-            <div className="w-12 h-12 rounded-xl bg-red-50 border border-red-100 flex items-center justify-center text-red-600 shrink-0 mt-0.5">
+            <div className="w-12 h-12 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 shrink-0 mt-0.5">
               <MapPin className="w-6 h-6" />
             </div>
             <div>

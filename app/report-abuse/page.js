@@ -17,7 +17,7 @@ const sections = [
       <div className="space-y-2">
         <p>If you encounter unauthorized usage of your copyrighted content or abusive behavior involving our brand:</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li>Email our security team at <a href="mailto:admin@khairadigital.com" className="text-red-400 hover:underline">admin@khairadigital.com</a></li>
+          <li>Email our security team at <a href="mailto:admin@khairadigital.com" className="text-blue-600 hover:underline">admin@khairadigital.com</a></li>
           <li>Include link/URL to the reported material or communications</li>
           <li>Provide proof of ownership or authorization if filing a copyright (DMCA) claim</li>
         </ul>

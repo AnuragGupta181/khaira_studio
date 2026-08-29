@@ -72,6 +72,14 @@ export function Globe({
   };
 
   useEffect(() => {
+    const handleWindowMouseMove = (e: MouseEvent) => {
+      // Rotate globe based on mouse position relative to center of screen
+      const normalizedX = (e.clientX / window.innerWidth - 0.5) * 2.5;
+      r.set(normalizedX);
+    };
+
+    window.addEventListener("mousemove", handleWindowMouseMove);
+
     const onResize = () => {
       if (canvasRef.current) {
         width = canvasRef.current.offsetWidth;
@@ -86,24 +94,31 @@ export function Globe({
       width: width * 2,
       height: width * 2,
       onRender: (state) => {
-        if (!pointerInteracting.current) phi += 0.005;
+        // Continuous auto rotation
+        phi += 0.005;
         state.phi = phi + rs.get();
         state.width = width * 2;
         state.height = width * 2;
       },
     });
 
-    setTimeout(() => (canvasRef.current!.style.opacity = "1"), 0);
+    setTimeout(() => {
+      if (canvasRef.current) {
+        canvasRef.current.style.opacity = "1";
+      }
+    }, 0);
+
     return () => {
       globe.destroy();
       window.removeEventListener("resize", onResize);
+      window.removeEventListener("mousemove", handleWindowMouseMove);
     };
-  }, [rs, config]);
+  }, [rs, config, r]);
 
   return (
     <div
       className={cn(
-        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[600px]",
+        "absolute inset-0 mx-auto aspect-[1/1] w-full max-w-[850px]",
         className,
       )}
     >

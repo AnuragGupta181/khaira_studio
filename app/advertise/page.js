@@ -3,34 +3,33 @@ import LegalPageLayout from '@/app/components/LegalPageLayout';
 const sections = [
   {
     id: 'advertising-solutions',
-    heading: '1. High-Impact Advertising Solutions',
+    heading: '1. Technical Product & SaaS Marketing Solutions',
     content: (
       <p>
-        Accelerate your brand growth with custom ad video production and multi-channel campaign strategies by Khaira Digital Solutions Private Limited. We design high-converting visual ads tailored for Facebook, Instagram, YouTube, and digital broadcast channels.
+        Accelerate your software product adoption with custom developer marketing, SaaS user acquisition strategies, and technical product showcases by Khaira Digital Solutions Private Limited.
       </p>
     ),
   },
   {
     id: 'ad-formats',
-    heading: '2. Commercial Ad Formats Offered',
+    heading: '2. Tech Growth Services Offered',
     content: (
       <div className="space-y-2">
-        <p>Our ad production services include:</p>
+        <p>Our technical marketing services include:</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li><strong>2D & 3D Animated Ads:</strong> Eye-catching motion graphics and explainer videos.</li>
-          <li><strong>Radio & FM Audio Ads:</strong> Broadcast-ready voiceovers recorded by RJ Mohit.</li>
-          <li><strong>Social Media Video Creatives:</strong> Short-form vertical ads engineered for viral engagement.</li>
-          <li><strong>Commercial Shoots:</strong> Professional on-location shoots with high-end camera gear.</li>
+          <li><strong>Developer Product Demos:</strong> High-impact UI walkthroughs and developer onboarding documentation.</li>
+          <li><strong>SaaS User Acquisition:</strong> Targeted digital campaigns designed for B2B decision makers.</li>
+          <li><strong>SEO & Technical Content:</strong> High-ranking engineering blogs and technical documentation.</li>
         </ul>
       </div>
     ),
   },
   {
     id: 'get-started-ad',
-    heading: '3. Book an Ad Production Session',
+    heading: '3. Partner With Our Engineering Team',
     content: (
       <p>
-        Ready to launch your next ad campaign? Contact our media strategists today at <a href="mailto:info@khairadigital.com" className="text-red-600 hover:underline font-medium">info@khairadigital.com</a>.
+        Ready to scale your software product? Contact our technical growth strategists today at <a href="mailto:info@khairadigital.com" className="text-red-600 hover:underline font-medium">info@khairadigital.com</a>.
       </p>
     ),
   },
@@ -39,8 +38,8 @@ const sections = [
 export default function AdvertisePage() {
   return (
     <LegalPageLayout
-      title="Advertise With Us"
-      subtitle="High-converting commercial ad video production, voiceover commercials, and digital ad strategy by Khaira Digital Solutions Private Limited."
+      title="Advertise & Grow Your Product"
+      subtitle="High-converting SaaS user acquisition, technical product marketing, and developer outreach by Khaira Digital Solutions Private Limited."
       lastUpdated="August 2026"
       sections={sections}
     />

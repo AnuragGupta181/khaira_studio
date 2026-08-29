@@ -6,7 +6,7 @@ const sections = [
     heading: '1. Acceptance of Terms',
     content: (
       <p>
-        By accessing or using the services provided by Khaira Digital Solutions Private Limited (&quot;Company&quot;, &quot;We&quot;, &quot;Us&quot;), including video editing, voiceover production, animation, graphic design, and digital marketing, you agree to be bound by these Terms of Service. If you disagree with any portion of these terms, you must not use our website or commission services.
+        By accessing or using the services provided by Khaira Digital Solutions Private Limited (&quot;Company&quot;, &quot;We&quot;, &quot;Us&quot;), including fullstack product development, AI model fine-tuning, web scraping, cloud deployment, embedded hardware integration, and digital solutions, you agree to be bound by these Terms of Service. If you disagree with any portion of these terms, you must not use our website or commission services.
       </p>
     ),
   },
@@ -31,7 +31,7 @@ const sections = [
     heading: '3. Intellectual Property Rights',
     content: (
       <p>
-        Upon full payment of all fees and invoices, final deliverables (videos, voiceover audio, design files) are licensed or transferred to the client for their intended commercial use. Khaira Digital Solutions Private Limited retains the right to display non-confidential project samples in portfolio showcases and promotional materials unless a formal Non-Disclosure Agreement (NDA) is executed.
+        Upon full payment of all fees and invoices, final deliverables (source code repositories, API binaries, fine-tuned model weights, and design files) are licensed or transferred to the client for their intended commercial use. Khaira Digital Solutions Private Limited retains the right to display non-confidential project samples in portfolio showcases and promotional materials unless a formal Non-Disclosure Agreement (NDA) is executed.
       </p>
     ),
   },

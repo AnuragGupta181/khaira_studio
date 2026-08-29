@@ -3,33 +3,33 @@ import LegalPageLayout from '@/app/components/LegalPageLayout';
 const sections = [
   {
     id: 'getting-started',
-    heading: '1. Getting Started with Our Services',
+    heading: '1. Getting Started with Developer Solutions',
     content: (
       <p>
-        Khaira Digital Solutions Private Limited offers end-to-end commercial voiceover, video production, graphic design, and digital marketing services. You can kickstart a project by contacting our client desk or filling out the inquiry form on our contact page.
+        Khaira Digital Solutions Private Limited provides end-to-end fullstack product development, AI model fine-tuning, web scraping, cloud deployment, and embedded hardware integration. You can kickstart a project by scheduling an engineering consultation or contacting us.
       </p>
     ),
   },
   {
-    id: 'voiceover-dubbing',
-    heading: '2. Voiceover & Dubbing Inquiries',
+    id: 'engineering-process',
+    heading: '2. Fullstack Development & Concept-to-Code (C-to-C)',
     content: (
       <div className="space-y-2">
-        <p>Our studio team led by RJ Mohit (Akashwani Radio) produces professional voiceovers in multiple Indian and international languages:</p>
+        <p>Our agile software engineering workflow includes:</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li>Send us your script or request scriptwriting assistance</li>
-          <li>Choose voice tone, language dialect, and background music preferences</li>
-          <li>Receive studio-recorded sample clips before final master rendering</li>
+          <li><strong>Architecture & Requirements:</strong> Technical blueprinting, database schema design, and API planning.</li>
+          <li><strong>Rapid MVP Sprint:</strong> Concept-to-Code prototyping with modern frameworks (React, Next.js, Node.js, FastAPI).</li>
+          <li><strong>Quality Assurance:</strong> Unit testing, security vulnerability scanning, and performance optimization.</li>
         </ul>
       </div>
     ),
   },
   {
-    id: 'video-editing-ads',
-    heading: '3. Ad Video Production & Editing',
+    id: 'ai-cloud-hardware',
+    heading: '3. AI Fine-Tuning, Cloud & Embedded Systems',
     content: (
       <p>
-        We produce high-converting commercial shoots, 2D/3D animation ads, social media video cuts (Instagram Reels, YouTube Shorts), and promotional corporate films. You can upload raw footage or request a complete shoot from our crew.
+        We build custom fine-tuned LLM pipelines (RAG, Llama 3), automated web scraping clusters, AWS/GCP cloud deployments (Docker, Kubernetes), and embedded IoT firmware (ESP32, C++). Full source code ownership and documentation are delivered upon project completion.
       </p>
     ),
   },
@@ -38,7 +38,7 @@ const sections = [
     heading: '4. Billing & Invoicing FAQs',
     content: (
       <p>
-        Invoices are generated upon project confirmation with complete GST details. Payment can be processed through bank transfer, UPI, or corporate credit card. For billing inquiries, email <a href="mailto:info@khairadigital.com" className="text-red-400 hover:underline">info@khairadigital.com</a>.
+        Invoices are generated upon milestone confirmation with full GST tax details. Corporate payment modes include bank wire transfer, UPI, or corporate card. For billing support, email <a href="mailto:info@khairadigital.com" className="text-red-600 hover:underline font-medium">info@khairadigital.com</a>.
       </p>
     ),
   },
@@ -48,7 +48,7 @@ export default function HelpPage() {
   return (
     <LegalPageLayout
       title="Help Center"
-      subtitle="Frequently asked questions and support guide for Khaira Digital Solutions Private Limited."
+      subtitle="Frequently asked questions and support guide for software engineering & AI services by Khaira Digital Solutions Private Limited."
       lastUpdated="August 2026"
       sections={sections}
     />

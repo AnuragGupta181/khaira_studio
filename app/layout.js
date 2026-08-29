@@ -16,28 +16,27 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Khaira Studio | Khaira Digital Solutions Private Limited",
+    default: "Khaira Studio | Software & AI Engineering Solutions",
     template: "%s | Khaira Studio",
   },
   description:
-    "Khaira Studio by Khaira Digital Solutions Private Limited is a full-service creative agency specializing in commercial ad video production, voiceover, dubbing, 2D/3D animation, graphic design, and digital ad strategies by RJ Mohit (Akashwani Radio).",
+    "Khaira Studio by Khaira Digital Solutions Private Limited provides end-to-end fullstack product development, LLM fine-tuning, web scraping, cloud deployment, and embedded hardware integration.",
   keywords: [
     "Khaira Studio",
     "Khaira Digital Solutions Private Limited",
-    "Khaira Digital Solutions",
-    "RJ Mohit",
-    "RJ Mohit Mathuriya",
-    "Voiceover Artist India",
-    "Akashvani Radio Voiceover",
-    "Ad Video Production",
-    "Commercial Shoots Noida",
-    "Animation Ad Production",
-    "Dubbing Studio India",
-    "Graphic Design Noida",
-    "Digital Marketing Agency",
-    "Facebook Ads Agency",
-    "Instagram Video Production",
-    "Search Engine Marketing",
+    "Fullstack Product Development",
+    "Frontend Engineering",
+    "Backend Architecture",
+    "Mobile App Development",
+    "Web Scraping Engines",
+    "Concept to Code C-to-C",
+    "Enterprise Solutions",
+    "Workflow Automation",
+    "Machine Learning AI",
+    "Fine-Tuning Models",
+    "Cloud Deployment DevOps",
+    "Embedded Integration",
+    "Hardware Software Integration",
   ],
   authors: [
     {
@@ -62,9 +61,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Khaira Studio | Khaira Digital Solutions Private Limited",
+    title: "Khaira Studio | Software & AI Engineering Solutions",
     description:
-      "Transform your brand with studio-quality voiceovers, commercial ad video production, animation, and digital ad strategy by RJ Mohit (Akashwani Radio). Fast 24-48 hr delivery.",
+      "Fullstack web & mobile development, LLM fine-tuning, web scraping, cloud DevOps, and embedded hardware integration by Khaira Digital Solutions Private Limited.",
     url: "https://khairadigitalsolutions.com",
     siteName: "Khaira Studio - Khaira Digital Solutions Private Limited",
     images: [
@@ -72,7 +71,7 @@ export const metadata = {
         url: "/scheme-gloge.png",
         width: 1200,
         height: 630,
-        alt: "Khaira Studio - Khaira Digital Solutions Private Limited",
+        alt: "Khaira Studio - Software & AI Engineering Solutions",
       },
     ],
     locale: "en_US",
@@ -80,9 +79,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Khaira Studio | Khaira Digital Solutions Private Limited",
+    title: "Khaira Studio | Software & AI Engineering Solutions",
     description:
-      "High-impact commercial video production, voiceovers, dubbing, and digital marketing by Khaira Digital Solutions Private Limited.",
+      "Fullstack development, LLM fine-tuning, web scraping, cloud deployment, and embedded hardware solutions.",
     images: ["/scheme-gloge.png"],
     creator: "@khairadigital",
   },
@@ -102,7 +101,7 @@ const jsonLd = {
   "url": "https://khairadigitalsolutions.com",
   "logo": "https://khairadigitalsolutions.com/scheme-gloge.png",
   "image": "https://khairadigitalsolutions.com/scheme-gloge.png",
-  "description": "Full-service commercial ad video production, voiceover, dubbing, animation, and digital marketing studio in Noida, UP, India.",
+  "description": "Fullstack web & mobile development, AI model fine-tuning, web scraping, cloud deployment, and embedded hardware integration studio.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Prateek Laurel, Sector 120",

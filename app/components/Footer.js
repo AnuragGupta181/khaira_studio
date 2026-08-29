@@ -14,8 +14,8 @@ const Footer = () => {
     { label: "Business Plans", href: "/business/pricing" },
     { label: "Marketing Solutions", href: "/marketing" },
     { label: "Consultancy Plans", href: "/consultancy" },
-    { label: "Animation Ads", href: "/projects" },
-    { label: "Commercial Shoots", href: "/projects" },
+    { label: "Fullstack Engineering", href: "/projects" },
+    { label: "AI & Embedded Solutions", href: "/projects" },
   ];
 
   const legalLinks = [
@@ -79,7 +79,7 @@ const Footer = () => {
             Khaira Digital Solutions <span className="text-red-500">Private Limited</span>
           </h1>
           <p className="text-gray-400 text-sm leading-relaxed">
-            Ad video production, voiceover, dubbing, animation, and digital branding — by RJ Mohit (Akashwani Radio).
+            Fullstack product development, AI model fine-tuning, web scraping, cloud deployment, and embedded hardware integration.
           </p>
           <address className="not-italic space-y-2.5 pt-2 text-xs text-gray-400">
             <div className="flex gap-2">

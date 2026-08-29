@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Play, Star, Award, Users, Zap, CheckCircle, ArrowRight, Globe, Mic, Video, PenTool, Palette, Monitor, Search, TrendingUp, Mail, Phone, MapPin } from 'lucide-react';
+import { ChevronDown, Play, Star, Award, Users, Zap, CheckCircle, ArrowRight, Globe, Mic, Video, PenTool, Palette, Monitor, Search, TrendingUp, Mail, Phone, MapPin, Code, Cpu, Layers, Smartphone, Database, Bot, Cloud, Server, Terminal, Settings, Workflow, Brain } from 'lucide-react';
 import Link from 'next/link'
 import Image from 'next/image';
 
@@ -11,6 +11,7 @@ import { BoxReveal } from '@/components/magicui/box-reveal';
 import { cn } from '@/lib/utils';
 import { SparklesText } from '@/components/magicui/sparkles-text';
 import CrowdCanvas from '@/app/components/CrowdCanvas';
+import ProjectCarouselCard from '@/app/components/ProjectCarouselCard';
 import {
   DraggableCardBody,
   DraggableCardContainer,
@@ -35,170 +36,169 @@ const ProfessionalWebsite = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
 const ourServices = [
-    {
-    name: "Explainer Video",
-    src: "/explainer.avif",
-    icon: <Play className="w-8 h-8" />,
-    description: "Engaging explainer videos for your brand",
-    className: "absolute top-32 left-[55%] rotate-[10deg]",
+  {
+    name: "Model Fine-Tuning",
+    src: "https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1280&auto=format&fit=crop",
+    icon: <Bot className="w-8 h-8" />,
+    description: "LLM fine-tuning, RAG pipelines, & AI agents",
+    className: "absolute top-10 left-[18%] rotate-[-5deg]",
   },
   {
-    name: "Lipsyng Video",
-    src: "/lypsing.jpg",
-    icon: <Video className="w-8 h-8" />,
-    description: "Seamless lip-sync video production",
-    className: "absolute top-40 left-[25%] rotate-[-7deg]",
+    name: "Workflow Automation",
+    src: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?q=80&w=1280&auto=format&fit=crop",
+    icon: <Workflow className="w-8 h-8" />,
+    description: "Automated pipelines, webhooks, & API integrations",
+    className: "absolute top-16 left-[24%] rotate-[6deg]",
   },
   {
-    name: "FM Radio",
-    src: "/fm.jpg",
-    icon: <Globe className="w-8 h-8" />,
-    description: "Radio broadcasting and production",
+    name: "Enterprise Solutions",
+    src: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1280&auto=format&fit=crop",
+    icon: <Layers className="w-8 h-8" />,
+    description: "Custom ERP, CRM, & internal operations tools",
+    className: "absolute top-56 left-[28%] rotate-[3deg]",
+  },
+  {
+    name: "Frontend Engineering",
+    src: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1280&auto=format&fit=crop",
+    icon: <Monitor className="w-8 h-8" />,
+    description: "High-performance Next.js & React interfaces",
+    className: "absolute top-40 left-[34%] rotate-[-7deg]",
+  },
+  {
+    name: "Backend Architecture",
+    src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1280&auto=format&fit=crop",
+    icon: <Server className="w-8 h-8" />,
+    description: "Scalable microservices, REST/GraphQL APIs",
     className: "absolute top-5 left-[40%] rotate-[8deg]",
   },
-
   {
-    name: "Audio Book",
-    src: "/audio.avif",
-    icon: <PenTool className="w-8 h-8" />,
-    description: "Professional audiobook narration",
-    className: "absolute top-20 right-[35%] rotate-[2deg]",
-  },
-  {
-    name: "E-Learning",
-    src: "/Elearning.avif",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Interactive e-learning solutions",
-    className: "absolute top-24 left-[45%] rotate-[-7deg]",
+    name: "Concept to Code (C-to-C)",
+    src: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1280&auto=format&fit=crop",
+    icon: <Terminal className="w-8 h-8" />,
+    description: "Rapid prototyping & turning ideas into production code",
+    className: "absolute top-48 left-[44%] rotate-[-6deg]",
   },
   {
-    name: "Cartoon Dubbing Or Voices",
-    src: "/cartoon.png",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Cartoon character voiceovers",
-    className: "absolute top-48 left-[35%] rotate-[-6deg]",
+    name: "Web Scraping Engines",
+    src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1280&auto=format&fit=crop",
+    icon: <Search className="w-8 h-8" />,
+    description: "High-volume data extraction & proxy automation",
+    className: "absolute top-24 left-[48%] rotate-[-7deg]",
   },
   {
-    name: "IVR",
-    src: "/ivr.jpg",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Interactive Voice Response systems",
-    className: "absolute top-56 left-[15%] rotate-[3deg]",
-  },
-    {
-    name: "Narration (Story/other)",
-    src: "/narration.jpg",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Story narration and more",
-    className: "absolute top-16 left-[10%] rotate-[6deg]",
+    name: "Embedded Systems",
+    src: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop",
+    icon: <Cpu className="w-8 h-8" />,
+    description: "Hardware-software IoT integration & firmware",
+    className: "absolute top-60 left-[54%] rotate-[-3deg]",
   },
   {
-    name: "10+ Character Voices)",
-    src: "/character.jpg",
-    icon: <Monitor className="w-8 h-8" />,
-    description: "Multiple character voiceovers",
-    className: "absolute top-36 left-[60%] rotate-[-9deg]",
+    name: "Fullstack Product",
+    src: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1280&auto=format&fit=crop",
+    icon: <Code className="w-8 h-8" />,
+    description: "End-to-end web & SaaS application engineering",
+    className: "absolute top-32 left-[58%] rotate-[10deg]",
   },
-    {
-    name: "Dubbing",
-    src: "/dubbing.jpg",
-    icon: <Mic className="w-8 h-8" />,
-    description: "Professional dubbing services with native speakers",
-    className: "absolute top-10 left-[20%] rotate-[-5deg]",
+  {
+    name: "Machine Learning & AI",
+    src: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1280&auto=format&fit=crop",
+    icon: <Brain className="w-8 h-8" />,
+    description: "Custom ML pipelines & predictive intelligence",
+    className: "absolute top-36 left-[64%] rotate-[-9deg]",
   },
-
+  {
+    name: "Cloud & DevOps",
+    src: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1280&auto=format&fit=crop",
+    icon: <Cloud className="w-8 h-8" />,
+    description: "AWS/GCP infrastructure, Kubernetes, CI/CD",
+    className: "absolute top-28 left-[70%] rotate-[4deg]",
+  },
+  {
+    name: "Mobile App Development",
+    src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1280&auto=format&fit=crop",
+    icon: <Smartphone className="w-8 h-8" />,
+    description: "Cross-platform iOS & Android mobile apps",
+    className: "absolute top-20 left-[76%] rotate-[2deg]",
+  },
 ];
-
 
   const services = [
     {
-      title: "Ad run on Facebook/Instagram",
-      image: "https://lh5.googleusercontent.com/uq93RkZMz6R6WJW-FQi0FGOvJ4PnNd3NY-7y-GrYpl4t1excWRR_2nBOnmzqfZlaFKbIwKLWvaLUYpdFOP3HWrElkBP_uDVIfZi5vsd0pevcN3aegqUydtq5R4kHaZcrnpB6q4WEhmAuRKgwJzlOd6xgh_pUf7mCbk6JIhaxSR47cuqDcy631Q=w1280",
-      icon: <TrendingUp className="w-6 h-6" />,
-      description: "Strategic social media advertising campaigns"
+      title: "Fullstack Product Development",
+      image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1280&auto=format&fit=crop",
+      icon: <Code className="w-6 h-6" />,
+      description: "End-to-end web & SaaS applications built with modern frameworks"
     },
     {
-      title: "Video Editing Service",
-      image: "https://lh6.googleusercontent.com/mNHfLQvBcXWOuu4chfGuESXidtCXcCgO_dmakQgmaZ3SDuJkY8BA_VfCq6bekyJreTd34XHj-Rdo1UhFK3QjE_QqDYDaT1F7TLmnI0v2cb3-6j24AHI1-1A7bnbMiRuSW0-87AamrEVK-cR6nww4YtVn2-QM03KUKSlNoT7JV1iwYn1udNX6NA=w1280",
-      icon: <Video className="w-6 h-6" />,
-      description: "Professional video editing and post-production"
+      title: "LLM Model Fine-Tuning & AI Agents",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=1280&auto=format&fit=crop",
+      icon: <Bot className="w-6 h-6" />,
+      description: "Domain-specific AI model tuning, RAG systems, and autonomous agents"
     },
     {
-      title: "Graphic Design",
-      image: "https://lh4.googleusercontent.com/sPGyuYrSaIEFQHry6DUyLg0tXDF-obmTzsn1ZyzNRMeTuF_r9QvjFvAg-nEWliPIGVhzDFcTfKiN9wOvaaU2XxQmvIXNbLamtMHcjtzt2fgRaSHHrwqjhr3W6XNNcLbpdVOAOq4dkuliPpW-GVPVxME7yy05e9i6Wlm4UXR_23Xhf8-TQdRHyQ=w1280",
-      icon: <Palette className="w-6 h-6" />,
-      description: "Creative graphic design solutions"
-    },
-    {
-      title: "Website Development",
-      image: "https://lh5.googleusercontent.com/YcGxGiqMJ3PCkD8KmdUMgr1yiGzYfcFZoMF4PJIIB7ElFKzN5wCOMCcrj7Sooz6Sr7FFQf7zXLru3QR_pkKCSTBskw4qq76A8WaQSytoVIylZmZGxBoAMOUuTIg1EnnFp6gBzPmSS0LFUO_eQzSBto3aDJVAb8lzs7mIk83EvHq5co1StrkH7Q=w1280",
-      icon: <Monitor className="w-6 h-6" />,
-      description: "Modern website design and development"
-    },
-    {
-      title: "Search Engine Marketing",
-      image: "https://lh6.googleusercontent.com/FNxcOyvAtpfhJs3d19C3OGJ9cH2SXwyt0Jfkciw5GpALlzdIoqL4EaJQFw3bD_z3Sxeq4QIYsVkEH1UOHf-66SeVAAjs1YVnZ0oxbh9x0aN7TIz_4IiTwn5aZf2ANGiyr9S4NPX9BBRycUr1HvYn8g8FBb08IPP1KLdLZKLvS09-Cznld05tew=w1280",
+      title: "Web Scraping & Data Engineering",
+      image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1280&auto=format&fit=crop",
       icon: <Search className="w-6 h-6" />,
-      description: "Strategic search engine marketing"
+      description: "High-scale web crawling, proxy networks, and structured ETL pipelines"
+    },
+    {
+      title: "Cloud Infrastructure & DevOps",
+      image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1280&auto=format&fit=crop",
+      icon: <Cloud className="w-6 h-6" />,
+      description: "Automated CI/CD pipelines, Kubernetes clusters, and cloud architecture"
+    },
+    {
+      title: "Embedded & Hardware Integration",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1280&auto=format&fit=crop",
+      icon: <Cpu className="w-6 h-6" />,
+      description: "IoT firmware, microcontrollers, and seamless hardware-software communication"
     }
   ];
 
   const testimonials = [
     {
-      quote:
-        "Excellent VO of different characters, Timely, Punctual, Eager to get the work perfected. Did more then asked. Will work again",
-        name:'Sanyahhayat',
-      //designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Khaira Digital Solutions engineered our Next.js & Node.js microservices platform with high scalability. Their engineering precision and prompt delivery exceeded our expectations!",
+      name: "Aarav Sharma",
+      title: "CTO, TechScale India (Bengaluru)",
       rating: 5,
     },
     {
-      quote:
-        "Mohit ji is an exceptional voice artist with a rich, engaging tone and remarkable versatility. His professionalism, quick turnaround, and ability to bring scripts to life with perfect emotion and clarity make him a true asset. Highly recommended!",
-        name:'Shreyans',
-      //designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Our EduLearn interactive platform was developed seamlessly by Khaira Digital. From real-time WebSocket canvas to student analytics, their fullstack execution was top-notch!",
+      name: "Priya Malhotra",
+      title: "VP of Product, EduLearn Tech (Noida)",
       rating: 5,
     },
     {
-      quote:
-        "Really liked his work, very polite and flexible with the multiple iterations.",
-      name: "Promorph",
-      //designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Working with Khaira Digital on the CityWeaver smart city portal was an exceptional experience. Their GIS spatial data processing and AWS deployment standards are world-class.",
+      name: "Rajesh Varma",
+      title: "Chief Officer, UrbanGov Systems (Delhi NCR)",
       rating: 5,
     },
     {
-      quote:
-        "He is fantastic at his work, very high-quality work. I was totally satisfied with this project.",
-      name: "lamshudipd",
-      //designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "The LLM fine-tuning and RAG vector search pipeline built by Khaira Digital automated 75% of our client support queries with high precision.",
+      name: "Kavita Reddy",
+      title: "Co-Founder, AI Insights Labs (Hyderabad)",
       rating: 5,
     },
     {
-      quote:
-        "Good. Talented person on fiverr. Will order again.",
-      name: "Bon P",
-      //designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Khaira Digital engineered our high-scale web scraping cluster processing over 2M requests daily. Flawless proxy rotation and zero downtime!",
+      name: "Vikramaditya Singh",
+      title: "Managing Director, LogiTech Solutions (Gurgaon)",
       rating: 5,
     },
     {
-      quote:
-        "Very fast. highly recommended.",
-      name: "Narinder Singh",
-      // designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Their Concept-to-Code (C-to-C) rapid MVP sprint delivered our HealthPulse mobile app in under 3 weeks. Outstanding technical capability!",
+      name: "Ananya Gupta",
+      title: "Head of Engineering, HealthPulse (Mumbai)",
       rating: 5,
     },
   ];
 
   const stats = [
     { number: "500", label: "Projects Completed", icon: <Award className="w-8 h-8" /> },
-    { number: "50", label: "Views Generated", icon: <Play className="w-8 h-8" /> },
-    { number: "200", label: "Happy Clients", icon: <Users className="w-8 h-8" /> },
-    { number: "7", label: "Years Experience", icon: <Star className="w-8 h-8" /> }
+    { number: "100", label: "APIs & Services", icon: <Server className="w-8 h-8" /> },
+    { number: "200", label: "Happy Enterprise Clients", icon: <Users className="w-8 h-8" /> },
+    { number: "12", label: "Years Engineering Experience", icon: <Star className="w-8 h-8" /> }
   ];
 
 
@@ -272,19 +272,19 @@ const ourServices = [
         </div>
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center -translate-y-12 sm:-translate-y-16 md:-translate-y-24">
-          <div className={fadeInUp('hero')}>
-            <BoxReveal boxColor={"#db2777"} duration={0.5}>
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-pulse">
-              Professional Creative Solutions
+          <div className="flex flex-col items-center justify-center text-center">
+            <BoxReveal boxColor={"#db2777"} duration={0.5} width="100%">
+            <h1 className="text-5xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent animate-pulse text-center">
+              Fullstack Software & AI Engineering
             </h1>
             </BoxReveal>
-            <BoxReveal boxColor={"#db2777"} duration={0.5}>
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your brand with studio-quality voiceovers, expert scriptwriting, and cutting-edge digital marketing solutions. 
-              <span className="text-red-600 font-semibold"> Fast delivery in 24-48 hours.</span>
+            <BoxReveal boxColor={"#db2777"} duration={0.5} width="100%">
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto text-center leading-relaxed">
+              From concept to code — fullstack web & mobile apps, LLM fine-tuning, web scraping, cloud deployment, and embedded hardware integration.
+              <span className="text-red-600 font-semibold"> Scalable software built for production.</span>
             </p>
             </BoxReveal>
-            <BoxReveal boxColor={"#db2777"} duration={0.5}>
+            <BoxReveal boxColor={"#db2777"} duration={0.5} width="100%">
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href={'/contact'}>
               <button className="group bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl transform hover:scale-105 transition-all duration-300 flex items-center space-x-2">
@@ -292,12 +292,6 @@ const ourServices = [
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               </Link>
-             <Link href={'/projects'}>
-              <button className="group border-2 border-red-500 text-red-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300 flex items-center space-x-2">
-                <Play className="w-5 h-5" />
-                <span>Watch Demo</span>
-              </button>
-             </Link>
             </div>
             </BoxReveal>
           </div>
@@ -309,46 +303,22 @@ const ourServices = [
         </div>
       </section>
 
-      {/* Stats Section (Temporarily commented out)
-      <section id="stats" className="py-20 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className={`text-center group hover:scale-105 transition-transform duration-300 ${staggeredFadeIn('stats', index * 200)}`}
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-red-500 to-pink-600 rounded-2xl mb-4 group-hover:shadow-lg transition-shadow">
-                  <div className="text-white">{stat.icon}</div>
-                </div>
-                <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 group-hover:text-red-600 transition-colors">
-                  
-                  <NumberTicker  value={stat.number}/>+
-                </div>
-                <div className="text-gray-600 font-medium">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      */}
-
       {/* Services Section */}
-      <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className={`text-center mb-16 ${fadeInUp('services')}`}>
+      <section id="services" className="py-20 bg-gradient-to-br from-gray-50 to-white w-full overflow-hidden">
+        <div className="w-full px-0 sm:px-0 lg:px-0">
+          <div className={`text-center mb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${fadeInUp('services')}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-red-600 to-pink-600 bg-clip-text ">
-              <SparklesText>Our Premium Services</SparklesText>
+              <SparklesText>Our Developer & AI Services</SparklesText>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive creative solutions delivered by industry experts with years of experience
+              End-to-end fullstack engineering, AI model fine-tuning, cloud infrastructure, and hardware-software integration solutions
             </p>
           </div>
 
 
 <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
-  <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
-    If it’s your first step into digital — make it powerful.
+  <p className="absolute top-1/2 mx-auto max-w-lg -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
+    Concept to Code — Engineering for Enterprise Scale.
   </p>
 
   {ourServices.map((item, index) => (
@@ -377,81 +347,43 @@ const ourServices = [
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className={`text-center mb-16 ${fadeInUp('portfolio')}`}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              Our <span className="text-red-600">Award-Winning</span> Work
+              Featured <span className="text-red-600">Engineering</span> Case Studies
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Showcasing successful projects that have generated millions of views and driven exceptional results
+              Showcasing production software systems, fine-tuned AI models, and scalable cloud architectures
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             {[
               {
-                title: "Animation Video Ad",
-                video: "https://www.youtube.com/embed/lddkJN67GjE",
-                views: "2.3M views",
-                category: "Animation"
+                title: "CityWeaver Platform",
+                link: "https://cityweaver.in/",
+                category: "Smart City & Urban Governance",
+                description: "Enterprise smart city portal and GIS infrastructure platform delivering real-time spatial data visualization, urban planning analytics, and municipal workflow automation.",
+                techStack: ["Next.js", "GeoJSON / GIS", "Node.js", "PostgreSQL"],
+                images: [
+                  "/cityweaver/1.png",
+                  "/cityweaver/2.png",
+                  "/cityweaver/3.png",
+                  "/cityweaver/4.png",
+                ]
               },
               {
-                title: "Hing Product Ad",
-                video: "https://www.youtube.com/embed/bx4d3Nfaa10",
-                views: "1.8M views",
-                category: "Product"
-              },
-              {
-                title: "Pharmacy Ad",
-                video: "https://www.youtube.com/embed/sZTkPK1lpdE",
-                views: "3.1M views",
-                category: "Healthcare"
+                title: "Write Here Platform",
+                link: "#",
+                category: "Interactive E-Learning & Teaching",
+                description: "Interactive e-learning and online teaching platform facilitating virtual classrooms, real-time course administration, digital whiteboard tools, and student engagement.",
+                techStack: ["React", "WebSockets", "TailwindCSS", "Node.js"],
+                images: [
+                  "/teaching/1.jpeg",
+                  "/teaching/2.jpeg",
+                  "/teaching/3.jpeg",
+                ]
               }
             ].map((project, index) => (
-              <div
-                key={index}
-                className={`group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:scale-105 ${staggeredFadeIn('portfolio', index * 100)}`}
-              >
-               <Link
-  href="/projects"
-  className="block group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden transform hover:scale-105"
->
-  <div className="aspect-w-16 aspect-h-9 relative">
-    <iframe
-      className="w-full h-56 rounded-t-2xl"
-      src={project.video + "?autoplay=0&mute=1"}
-      title={project.title}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-      frameBorder="0"
-    />
-      {/* <HeroVideoDialog
-        className="block dark:hidden w-full h-56 rounded-t-2xl"
-        animationStyle="from-center"
-        videoSrc={project.video + "?autoplay=0&mute=1"}
-        thumbnailAlt="Hero Video"
-        title={project.title}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        frameBorder="0"
-      /> */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-t-2xl"></div>
-    <div className="absolute top-4 right-4 px-3 py-1 bg-red-600 text-white text-sm font-medium rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-      {project.category}
-    </div>
-  </div>
-  <div className="p-6">
-    <h3 className="text-xl font-bold mb-2 text-gray-900 group-hover:text-red-600 transition-colors">
-      {project.title}
-    </h3>
-    <div className="flex items-center justify-between">
-      <span className="text-gray-600 flex items-center space-x-2">
-        <Play className="w-4 h-4" />
-        <span>{project.views}</span>
-      </span>
-      <span className="text-red-600 font-semibold hover:text-red-700 transition-colors">
-        View Project
-      </span>
-    </div>
-  </div>
-</Link>
+              <div key={index} className={staggeredFadeIn('portfolio', index * 100)}>
+                <ProjectCarouselCard project={project} />
               </div>
             ))}
           </div>

@@ -16,7 +16,7 @@ const featuredProjects = [
     link: "https://cityweaver.in/",
     category: "Smart City & Urban Governance",
     description: "Enterprise smart city portal and GIS infrastructure platform delivering real-time spatial data visualization, urban planning analytics, and municipal workflow automation.",
-    techStack: ["Next.js", "GeoJSON / GIS", "Node.js", "PostgreSQL"],
+    techStack: ["Next.js", "GeoJSON / GIS", "Node.js", "PostgreSQL", "Cloud (Azure)"],
     images: [
       "/cityweaver/1.png",
       "/cityweaver/2.png",
@@ -29,7 +29,7 @@ const featuredProjects = [
     link: "#",
     category: "Interactive E-Learning & Teaching",
     description: "Interactive e-learning and online teaching platform facilitating virtual classrooms, real-time course administration, digital whiteboard tools, and student engagement.",
-    techStack: ["React", "WebSockets", "TailwindCSS", "Node.js"],
+    techStack: ["React", "WebSockets", "TailwindCSS", "Node.js", "Cloud Deployment"],
     images: [
       "/teaching/1.jpeg",
       "/teaching/2.jpeg",
@@ -49,35 +49,45 @@ const ProjectPage = () => {
 
   return (
     <div className="bg-white text-gray-900 min-h-screen">
-      <BackgroundBeamsWithCollision>
-        <BackgroundLines className="w-full flex flex-col items-center justify-center px-4">
-          <section className="relative w-full min-h-screen overflow-hidden flex items-center justify-center py-20">
-            {/* Globe Background Centered & Shifted Down */}
-            <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none translate-y-16 sm:translate-y-24">
-              <div className="w-[90vw] max-w-[720px] aspect-square opacity-65 sm:opacity-80 transition-all duration-300">
-                <Globe />
+      {/* Mobile Hero View (Clean full width edge-to-edge with generous top gap) */}
+      <section className="sm:hidden relative w-full bg-gradient-to-br from-red-50 via-pink-50 to-purple-50 pt-32 pb-16 px-6 text-center border-b border-gray-100">
+        <h1 className="text-4xl font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight mb-4 mt-4">
+          <TypingAnimation className="text-4xl">Featured Projects</TypingAnimation>
+        </h1>
+        <p className="text-sm font-medium text-gray-700 leading-relaxed max-w-xl mx-auto mt-2">
+          Explore our flagship engineering case studies featuring interactive image carousels, live platform links, and fullstack technology architectures.
+        </p>
+      </section>
+
+      {/* Desktop Hero View (Interactive Beams, Rays & Full 3D Globe) */}
+      <div className="hidden sm:block relative w-full min-h-screen bg-gradient-to-br from-red-500/5 via-pink-500/5 to-purple-500/5">
+        <BackgroundBeamsWithCollision className="min-h-screen w-full flex items-center justify-center pt-24">
+          <BackgroundLines className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-20">
+            <section className="relative w-full min-h-[80vh] flex items-center justify-center py-20">
+              {/* Full Globe Background Centered in Middle */}
+              <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+                <div className="w-[85vw] max-w-[680px] aspect-square opacity-85 transition-all duration-300">
+                  <Globe />
+                </div>
               </div>
-            </div>
 
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-red-500/10 via-pink-500/10 to-purple-500/10 z-0" />
+              {/* Hero Content with Gap below Top Header */}
+              <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24">
+                <h1 className="text-6xl lg:text-7xl m-6 font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight">
+                  <TypingAnimation className="text-6xl lg:text-7xl">Featured Projects</TypingAnimation>
+                </h1>
 
-            {/* Hero Content */}
-            <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <h1 className="text-[10vw] sm:text-7xl m-4 font-extrabold bg-gradient-to-r from-red-600 via-pink-600 to-purple-600 bg-clip-text text-transparent leading-tight">
-                <TypingAnimation className="text-5xl sm:text-7xl">Featured Projects</TypingAnimation>
-              </h1>
-
-              <p className="text-base sm:text-lg md:text-xl font-medium text-gray-700 leading-relaxed max-w-3xl mx-auto mt-4">
-                Explore our flagship engineering case studies featuring interactive image carousels, live platform links, and fullstack technology architectures.
-              </p>
-            </div>
-          </section>
-        </BackgroundLines>
-      </BackgroundBeamsWithCollision>
+                <p className="text-lg md:text-xl font-medium text-gray-700 leading-relaxed max-w-3xl mx-auto mt-6 px-2">
+                  Explore our flagship engineering case studies featuring interactive image carousels, live platform links, and fullstack technology architectures.
+                </p>
+              </div>
+            </section>
+          </BackgroundLines>
+        </BackgroundBeamsWithCollision>
+      </div>
 
       {/* Projects Showcase Grid */}
-      <section className="max-w-7xl mx-auto px-4 py-20">
+      <section className="max-w-7xl mx-auto px-4 py-10 sm:py-20">
         <div className="text-center mb-16">
           <SparklesText className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Production Case Studies

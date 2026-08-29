@@ -16,27 +16,31 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: {
-    default: "Khaira Studio | Software & AI Engineering Solutions",
+    default: "Khaira Studio | Fullstack Engineering, AI Model Fine-Tuning & Cloud Solutions",
     template: "%s | Khaira Studio",
   },
   description:
-    "Khaira Studio by Khaira Digital Solutions Private Limited provides end-to-end fullstack product development, LLM fine-tuning, web scraping, cloud deployment, and embedded hardware integration.",
+    "Khaira Studio by Khaira Digital Solutions Private Limited provides end-to-end fullstack product development, AI model fine-tuning, web scraping, cloud deployment (AWS/Azure), embedded hardware integration, and flagship production platforms like CityWeaver & Write Here.",
   keywords: [
     "Khaira Studio",
     "Khaira Digital Solutions Private Limited",
+    "CityWeaver Platform",
+    "Write Here Platform",
+    "Smart City GIS Infrastructure",
+    "Interactive E-Learning EdTech",
     "Fullstack Product Development",
-    "Frontend Engineering",
-    "Backend Architecture",
-    "Mobile App Development",
-    "Web Scraping Engines",
+    "Frontend Engineering Next.js React",
+    "Backend Architecture Microservices",
+    "Mobile App Development iOS Android",
+    "Web Scraping Engines Data Mining",
     "Concept to Code C-to-C",
-    "Enterprise Solutions",
-    "Workflow Automation",
-    "Machine Learning AI",
-    "Fine-Tuning Models",
-    "Cloud Deployment DevOps",
-    "Embedded Integration",
-    "Hardware Software Integration",
+    "Enterprise Solutions ERP CRM",
+    "Workflow Automation Webhooks",
+    "Machine Learning AI RAG",
+    "LLM Model Fine-Tuning",
+    "Cloud Deployment Azure AWS DevOps",
+    "Embedded Hardware Integration IoT",
+    "Software Engineering Studio Noida India",
   ],
   authors: [
     {
@@ -61,9 +65,9 @@ export const metadata = {
     },
   },
   openGraph: {
-    title: "Khaira Studio | Software & AI Engineering Solutions",
+    title: "Khaira Studio | Fullstack Engineering, AI & Cloud Solutions",
     description:
-      "Fullstack web & mobile development, LLM fine-tuning, web scraping, cloud DevOps, and embedded hardware integration by Khaira Digital Solutions Private Limited.",
+      "Engineers of flagship production platforms including CityWeaver Smart City Portal & Write Here EdTech. Fullstack web & mobile apps, LLM fine-tuning, cloud DevOps, and hardware integration.",
     url: "https://khairadigitalsolutions.com",
     siteName: "Khaira Studio - Khaira Digital Solutions Private Limited",
     images: [
@@ -81,7 +85,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Khaira Studio | Software & AI Engineering Solutions",
     description:
-      "Fullstack development, LLM fine-tuning, web scraping, cloud deployment, and embedded hardware solutions.",
+      "Fullstack engineering, LLM model fine-tuning, cloud deployment (AWS/Azure), and flagship platforms CityWeaver & Write Here.",
     images: ["/scheme-gloge.png"],
     creator: "@khairadigital",
   },
@@ -95,13 +99,13 @@ export const metadata = {
 
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "SoftwareApplication",
   "name": "Khaira Digital Solutions Private Limited",
   "alternateName": "Khaira Studio",
   "url": "https://khairadigitalsolutions.com",
   "logo": "https://khairadigitalsolutions.com/scheme-gloge.png",
   "image": "https://khairadigitalsolutions.com/scheme-gloge.png",
-  "description": "Fullstack web & mobile development, AI model fine-tuning, web scraping, cloud deployment, and embedded hardware integration studio.",
+  "description": "Fullstack product engineering, LLM model fine-tuning, web scraping engines, cloud infrastructure (AWS/Azure), embedded hardware integration, and flagship production applications including CityWeaver and Write Here Platform.",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Prateek Laurel, Sector 120",
@@ -112,9 +116,54 @@ const jsonLd = {
   },
   "email": "info@khairadigital.com",
   "priceRange": "$$",
-  "sameAs": [
-    "https://www.youtube.com/@rsstoryanalysis9547"
-  ]
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Software & AI Engineering Deliverables",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Fullstack Product Development"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "LLM Fine-Tuning & AI Agents"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "CityWeaver Platform - Smart City Governance GIS"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Write Here Platform - Interactive E-Learning Whiteboard"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Cloud Deployment & DevOps Architecture (AWS/Azure)"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Embedded Systems & IoT Integration"
+        }
+      }
+    ]
+  }
 };
 
 export default function RootLayout({ children }) {
